@@ -1,3 +1,9 @@
+import 'package:barber_shop/constants/colors.dart';
+import 'package:barber_shop/screens/log_in_screen.dart';
+import 'package:barber_shop/screens/splash_screen.dart';
+import 'package:barber_shop/screens/splash_screen_03.dart';
+import 'package:barber_shop/screens/splash_screen_04.dart';
+import 'package:barber_shop/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,24 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: primaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(),
+      home: WelcomeScreen(),
     );
   }
 }
